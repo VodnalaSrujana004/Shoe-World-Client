@@ -1,0 +1,274 @@
+/* .card {
+    position: relative;
+    top: 2em;
+    width: 12.5em;
+    height: 7.5em;
+    background: #ffffff;
+    transition: .4s ease-in-out;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    overflow: hidden;
+  }
+  
+  .heading {
+    position: relative;
+    color: black;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-top: 1em;
+    padding-left: 1em;
+    transition: .4s ease-in-out;
+  }
+  
+  .details {
+    position: relative;
+    color: black;
+    font-size: 0.6em;
+    padding-top: 1.5em;
+    padding-left: 2em;
+    transition: .4s ease-in-out;
+  }
+  
+  .price {
+    position: relative;
+    color: black;
+    font-weight: bold;
+    font-size: 0.8em;
+    padding-top: 1.5em;
+    padding-left: 1.5em;
+    top: 9.6em;
+    left: 5em;
+    transition: .4s ease-in-out;
+  }
+  
+  .btn1 {
+    position: relative;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    font-size: 0.6em;
+    padding-left: 6.9em;
+    padding-right: 6.9em;
+    padding-top: 0.8em;
+    padding-bottom: 0.85em;
+    border-radius: 10px;
+    left: 2.6em;
+    top: 14.8em;
+    transition: .4s ease-in-out;
+    font-weight: bold;
+  }
+  
+  .btn1:hover {
+    background-color: limegreen;
+    cursor: pointer;
+  }
+  
+  .btn2 {
+    position: relative;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    font-size: 0.6em;
+    padding-left: 5.1em;
+    padding-right: 5.1em;
+    padding-top: 0.8em;
+    padding-bottom: 0.85em;
+    border-radius: 10px;
+    left: 2.6em;
+    top: 15.5em;
+    transition: .4s ease-in-out;
+    font-weight: bold;
+  }
+  
+  .btn2:hover {
+    background-color: limegreen;
+    cursor: pointer;
+  }
+  
+  .glasses {
+    position: relative;
+    top: -4em;
+    left: 9.5em;
+    width: 70px;
+    height: 70px;
+    transition: .4s ease-in-out;
+  }
+  
+  .card:hover {
+    width: 12.5em;
+    height: 23em;
+    transform: translateY(1.25em);
+  }
+  
+  .card:hover + .glasses {
+    transform: rotateX(360deg);
+    height: 100px;
+    width: 100px;
+    left: 3em;
+    top: -18em;
+  }
+  
+  .card:hover .heading {
+    transform: translateY(7em) translateX(2.3em);
+  }
+  
+  .card:hover .details {
+    transform: translateY(13em) translateX(3.5em);
+  } */
+
+
+  /* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+}
+
+/* Product Card */
+.product-card {
+  width: 300px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 1rem auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.card-price {
+  font-size: 1.1rem;
+  color: #7d3cff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+.card-actions {
+  padding: 1rem;
+}
+
+.btn-buy {
+  width: 100%;
+  padding: 0.7rem;
+  font-size: 1rem;
+  color: white;
+  background-color: #7d3cff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-buy:hover {
+  background-color: #6529c2;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal */
+.modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-align: center;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.close-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ff4d4d;
+  transition: color 0.3s ease;
+}
+
+.close-icon:hover {
+  color: #e60000;
+}
+
+.modal-form .input-field,
+.modal-form .textarea-field {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.modal-form .input-field:focus,
+.modal-form .textarea-field:focus {
+  border-color: #7d3cff;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #7d3cff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #6529c2;
+}

@@ -1,0 +1,61 @@
+/* Container Styling */
+.brands-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px;
+    padding: 10px;
+  }
+  
+  /* Card Styling */
+  .brand-card {
+    background: #fff;
+    border: 2px solid #f0f0f0;
+    border-radius: 10px;
+    width: 200px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .brand-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Logo Styling */
+  .brand-logo {
+    width: 100px;
+    height: 80px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+  
+  .brand-card:hover .brand-logo {
+    transform: rotate(10deg) scale(1.1);
+  }
+  
+  /* Text Styling */
+  .brand-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .brand-description {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .section-heading {
+    font-size: 2.5rem; /* Adjust the size to your preference */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    
+  }
+  
